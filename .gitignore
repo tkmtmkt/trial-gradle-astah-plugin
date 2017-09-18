@@ -1,0 +1,11 @@
+*.classes
+*.jar
+*.war
+*.war
+
+# gradle files
+.gradle/
+build/
+
+# eclipse files
+bin/
