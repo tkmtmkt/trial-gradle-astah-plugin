@@ -28,3 +28,10 @@ gradleのライブラリ指定を自動で解決できない場合、
     $GRADLE_HOME/lib/gradle-installation-beacon-4.1.jar
     study-astah_api-gradle/buildSrc/lib/astah-api.jar
     study-astah_api-gradle/buildSrc/lib/astah-community.jar
+
+
+参考
+----
+
+* [第58章 カスタムタスクの作成](http://gradle.monochromeroad.com/docs/userguide/custom_tasks.html)
+* [第59章 カスタムプラグインの作成](http://gradle.monochromeroad.com/docs/userguide/custom_plugins.html)
