@@ -1,7 +1,7 @@
 apply plugin: 'groovy'
 apply plugin: astah.AstahPlugin
 
-defaultTasks 'listClasses'
+defaultTasks 'astahListClasses'
 
 
 //eclipse用の設定
