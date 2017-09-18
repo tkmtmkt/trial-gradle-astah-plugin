@@ -6,6 +6,4 @@
 # gradle files
 .gradle/
 build/
-
-# eclipse files
-bin/
+/bin/
