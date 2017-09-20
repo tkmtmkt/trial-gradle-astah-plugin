@@ -1,15 +1,31 @@
 apply plugin: 'groovy'
 
 dependencies {
+    compile files(['lib/astah-api.jar'])
+    runtime files(['lib/astah-community.jar'])
+
+    //for Eclipse
     compile gradleApi()
     compile localGroovy()
 
-    compile files(['lib/astah-api.jar'])
-    runtime files(['lib/astah-community.jar'])
+    //for Scala Console
+    compile 'org.scala-lang:scala-library:2.12.3'
+    runtime 'org.scala-lang:scala-compiler:2.12.3'
 }
 
 task groovyConsole(type: JavaExec, dependsOn: 'classes') {
     description = 'Launch Groovy Console.'
     main = 'groovy.ui.Console'
     classpath = sourceSets.test.runtimeClasspath
+}
+
+task scalaConsole(type: JavaExec, dependsOn: 'classes') {
+    main = 'scala.tools.nsc.MainGenericRunner'
+    classpath = sourceSets.test.runtimeClasspath
+    standardInput = System.in
+}
+
+task classpath() {
+    description = 'Usage: scala -cp (gradlew -q classpath)'
+    println sourceSets.test.runtimeClasspath.asPath
 }
