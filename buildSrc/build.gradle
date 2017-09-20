@@ -7,3 +7,9 @@ dependencies {
     compile files(['lib/astah-api.jar'])
     runtime files(['lib/astah-community.jar'])
 }
+
+task groovyConsole(type: JavaExec, dependsOn: 'classes') {
+    description = 'Launch Groovy Console.'
+    main = 'groovy.ui.Console'
+    classpath = sourceSets.test.runtimeClasspath
+}
