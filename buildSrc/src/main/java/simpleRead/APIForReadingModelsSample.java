@@ -21,12 +21,15 @@ import com.change_vision.jude.api.inf.project.ProjectAccessor;
  */
 public class APIForReadingModelsSample {
 
-    //installer
-    private static final String PROJECT_PATH = "./SampleModel.asta";
     //eclipse
     //private static final String PROJECT_PATH = "api_sample\\simpleRead\\SampleModel.asta";
 
     public static void main(String[] args) {
+        if (args.length != 1) {
+            System.err.println("Usage: inputFile.asta");
+            return;
+        }
+        String inputFile = args[0];
         try {
             System.out.println("Opening project...");
 
@@ -37,7 +40,7 @@ public class APIForReadingModelsSample {
             // param 2 : true not to check model version
             // param 3 : false not to lock a project file
             // param 4 : true to open a project file with the read only mode if the file is locked.
-            prjAccessor.open(PROJECT_PATH, true, false, true);
+            prjAccessor.open(inputFile, true, false, true);
 
             System.out.println("Printing the elements...");
 

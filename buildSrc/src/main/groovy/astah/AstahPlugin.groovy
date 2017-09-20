@@ -1,13 +1,10 @@
 package astah
 
-import org.gradle.api.plugins.JavaPlugin
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 
-import csvexporter.ClassDefinitionExporter
-import simpleRead.APIForReadingModelsSample
-
 class AstahPlugin implements Plugin<Project> {
+    @Override
     void apply(Project project) {
         AstahListClassesTask astahListClassesTask =
             project.tasks.create('astahListClasses', AstahListClassesTask.class)

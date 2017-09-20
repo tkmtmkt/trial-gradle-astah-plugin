@@ -2,3 +2,12 @@ apply plugin: 'groovy'
 apply plugin: astah.AstahPlugin
 
 defaultTasks 'astahListClasses'
+
+astahListClasses {
+    inFile = "buildSrc/src/test/resources/APISample.asta"
+}
+
+astahExportClasses {
+    inFile = "buildSrc/src/test/resources/APISample.asta"
+    outFile = "APISample.csv"
+}
