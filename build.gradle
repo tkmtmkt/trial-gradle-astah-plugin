@@ -2,13 +2,3 @@ apply plugin: 'groovy'
 apply plugin: astah.AstahPlugin
 
 defaultTasks 'astahListClasses'
-
-
-//eclipse用の設定
-dependencies {
-    compile gradleApi()
-    compile localGroovy()
-
-    compile files(['buildSrc/lib/astah-api.jar'])
-    runtime files(['buildSrc/lib/astah-community.jar'])
-}

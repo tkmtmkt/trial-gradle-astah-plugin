@@ -1,6 +1,9 @@
 apply plugin: 'groovy'
 
 dependencies {
+    compile gradleApi()
+    compile localGroovy()
+
     compile files(['lib/astah-api.jar'])
     runtime files(['lib/astah-community.jar'])
 }
