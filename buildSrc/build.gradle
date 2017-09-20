@@ -3,6 +3,8 @@ apply plugin: 'groovy'
 dependencies {
     compile files(['lib/astah-api.jar'])
     runtime files(['lib/astah-community.jar'])
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.assertj:assertj-core:3.8.0'
 
     //for Eclipse
     compile gradleApi()
