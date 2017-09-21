@@ -15,6 +15,18 @@ dependencies {
     runtime 'org.scala-lang:scala-compiler:2.12.3'
 }
 
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+compileJava {
+    options.compilerArgs += ['-Xlint:all']
+}
+
+test {
+    testLogging {
+        events 'started', 'skipped', 'passed', 'failed'
+    }
+}
+
 task groovyConsole(type: JavaExec, dependsOn: 'classes') {
     description = 'Launch Groovy Console.'
     main = 'groovy.ui.Console'
