@@ -4,10 +4,10 @@ apply plugin: astah.AstahPlugin
 defaultTasks 'astahListClasses'
 
 astahListClasses {
-    inFile = "buildSrc/src/test/resources/APISample.asta"
+    inFile = "buildSrc/src/test/resources/SampleModel.asta"
 }
 
 astahExportClasses {
-    inFile = "buildSrc/src/test/resources/APISample.asta"
+    inFile = "buildSrc/src/test/resources/SampleModel.asta"
     outFile = "APISample.csv"
 }
