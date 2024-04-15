@@ -1,4 +1,4 @@
-study-astah_api-gradle
+trial-astah_api-gradle
 ======================
 
 ディレクトリ以下のastahファイル内のモデル、クラス図から
